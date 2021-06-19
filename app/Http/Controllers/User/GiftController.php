@@ -16,7 +16,6 @@ class GiftController extends Controller
     public function index()
     {
         $items = DetailGift::where('users_id',auth()->user()->id)->orderBy('id','desc')->with('gift')->paginate(10);
-        // return $items;
         return view('pages.user.gift.index')->with([
             'items' => $items
         ]);
