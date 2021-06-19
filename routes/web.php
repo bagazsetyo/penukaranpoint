@@ -58,7 +58,7 @@ Route::prefix('user')
 
 Route::prefix('api')
         ->namespace('API')
-        // ->middleware('auth')
+        ->middleware('auth')
         ->group(function () {
         
             Route::group(['as' => 'api.'], function(){
